@@ -21,15 +21,14 @@
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        /* použijte auto-fit s šířkou sloupce minimálně 300px */
-
+        grid-auto-columns: minmax(300px, auto-fit);
         padding: 1em;
         gap: 1em;
     }
     .categories__item {
         position: relative;
         color: inherit;
-        /* max-height: 80vh; */
+     max-height: 80vh;
     }
     .categories__item:hover {
         box-shadow: 0 0 8px 2px var(--text-light);
@@ -44,6 +43,48 @@
 
     /* TODO */
 
+    .categories{
+    }
+    .categories__item{
+        border-radius: 1em;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .categories__item:hover{
+    transform: scaleY(1.05);
+
+    }
+    .categories__item{
+
+    }
+    .categories__item:hover .categories__item-image{
+        transition: transform 0.5s ;
+        transform: scale(1.2);
+    }
+
+    .categories__item:hover .categories__item-description{
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        transition:  0.5s;
+    }
+
+
+
+.page-header{
+    background-image: url(/assets/images/egypt.webp);
+    background-repeat: no-repeat;
+}
+.categories__item-description{
+position: absolute;
+bottom: 0;
+left: 0;
+color:white
+}
+
+
 
 }
 
@@ -51,6 +92,7 @@
     .img-responsive {
         width: 100%;
         display: block;
+
     }
     figure, h2 {
         margin: 0;
